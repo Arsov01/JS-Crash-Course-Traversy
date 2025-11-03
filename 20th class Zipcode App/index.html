@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Location finder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero hero-body is-dark container">
+      <h1 class="title">Mk Location Info</h1>
+      <h2 class="subtittle">Enter a zipcode to get a location info</h2>
+      <form id="zipForm">
+        <div class="field">
+          <div class="control has-icons-left has-icons-right">
+            <input
+              class="input zip is-large"
+              type="text"
+              placeholder="Enter Zipcode"
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-map-pin"></i>
+            </span>
+            <span class="icon is-small is-right icon-check">
+              <i class="fa fa-check"></i>
+            </span>
+            <span class="icon is-small is-right icon-remove">
+              <i class="fa fa-remove"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <br />
+    <div class="container">
+      <div id="output"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

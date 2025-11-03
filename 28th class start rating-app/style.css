@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333 !important;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f8f9fa;
+}
+
+th {
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #e9ecef;
+  font-size: 1.1rem;
+}
+
+td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s;
+}
+
+tr:hover td {
+  background-color: #f8f9fa;
+}
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.stars-outer::before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  /* color: #ffc107; */
+}
+
+.stars-inner::before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 5 Free";
+  color: #f8ce0b;
+  font-weight: 900;
+}
+
+.number-rating {
+  margin-left: 10px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 20px 15px;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+  }
+
+  .stars-outer {
+    font-size: 1rem;
+  }
+
+  .number-rating {
+    font-size: 0.9rem;
+  }
+}
+
+/* Brand-specific colors for visual distinction */
+.sony td:first-child {
+  border-left: 4px solid #0066cc;
+}
+
+.samsung td:first-child {
+  border-left: 4px solid #1428a0;
+}
+
+.vizio td:first-child {
+  border-left: 4px solid #6a0dad;
+}
+
+.tcl td:first-child {
+  border-left: 4px solid #e60000;
+}
+
+.philips td:first-child {
+  border-left: 4px solid #0099ff;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Pdf Viewer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <button class="btn" id="prev-page">
+        <i class="fas fa-arrow-circle-left"></i>Prev Page
+      </button>
+      <button class="btn" id="next-page">
+        Next Page <i class="fas fa-arrow-circle-right"></i>
+      </button>
+      <span class="page-info">
+        Page <span id="page-num"> </span> of <span id="page-count"></span>
+      </span>
+    </div>
+
+    <canvas id="pdf-render"></canvas>
+
+    <!-- ✅ Scripts at the BOTTOM for better performance -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+      // Set PDF.js worker path (REQUIRED)
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

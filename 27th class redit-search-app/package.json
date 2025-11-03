@@ -1,0 +1,12 @@
+{
+  "name": "27th-class-redit-search-app",
+  "version": "1.0.0",
+  "description": "reddit search app",
+  "license": "MIT",
+  "author": "ace",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
