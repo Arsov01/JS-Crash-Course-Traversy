@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Web components example</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <!-- Fixed URL - removed extra colon -->
+    <user-card
+      name="Aleksandar Arsov"
+      avatar="https://randomuser.me/api/portraits/men/1.jpg"
+    >
+      <div slot="email">aleksandararsov@gmail.com</div>
+      <div slot="phone">075971104</div>
+    </user-card>
+    <user-card
+      name="Aleksandar Arsov"
+      avatar="https://randomuser.me/api/portraits/men/2.jpg"
+    ></user-card>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

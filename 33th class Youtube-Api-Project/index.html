@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Updated CSP to allow Materialize from CDNJS -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https://apis.google.com https://www.gstatic.com https://*.google.com https://*.googleapis.com https://cdnjs.cloudflare.com; 
+               script-src 'self' https://apis.google.com https://www.gstatic.com https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval'; 
+               style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; 
+               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
+               frame-src https://accounts.google.com;"
+    />
+
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Youtube Channel Data</title>
+
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <nav class="black">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">YouTube Channel Data</a>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <section>
+      <div class="container">
+        <div class="center-align">
+          <p class="flow-text">Log In With Google</p>
+          <button class="btn red" id="authorize-button">Log In</button>
+          <button class="btn red" id="signout-button" style="display: none">
+            Log Out
+          </button>
+        </div>
+        <br />
+        <div id="content" style="display: none">
+          <div class="row">
+            <div class="col s12 m6">
+              <form id="channel-form">
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="channel-input"
+                    placeholder="Enter Channel Name"
+                    class="validate"
+                  />
+                  <label for="channel-input">YouTube Channel</label>
+                  <button type="submit" class="btn waves-effect waves-light">
+                    Get Channel Data
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col s12 m6" id="channel-data"></div>
+          </div>
+          <div class="row" id="video-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORTANT: Load Google API FIRST -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Your script -->
+    <script src="./script.js"></script>
+
+    <!-- Initialize Materialize AFTER it's loaded -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if M is defined before using it
+        if (typeof M !== "undefined") {
+          M.AutoInit();
+        } else {
+          console.warn("Materialize.js not loaded");
+        }
+      });
+    </script>
+  </body>
+</html>
